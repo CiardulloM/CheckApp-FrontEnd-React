@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Asegurarnos de que html y body ocupen todo el viewport */
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+.handleMainDiv {
+	z-index: 2;
+	margin: 0;
+	border: 0;
+	height: 100vh;
+	width: 100%;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: 1fr;
+	overflow: auto;
+}
+#root {
+	overflow: auto;
+}
+.mainContent {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	position: sticky;
+}

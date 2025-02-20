@@ -1,0 +1,170 @@
+body {
+	margin: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.customHr {
+	background-color: black;
+	height: 2px;
+	border: none;
+	margin: 20px 0;
+	width: 30%;
+}
+
+.formConteiner {
+	width: 50%;
+	height: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.formConteiner form {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.formConteiner form input {
+	font-size: 15px;
+	margin-top: 2vh;
+	width: 70%;
+	height: 50px;
+	text-align: center;
+	border-color: transparent;
+	border-radius: 30px;
+	border: none;
+	box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.05);
+	outline: none;
+	transition: 0.7;
+}
+
+.formConteiner form input:hover {
+	box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.219);
+}
+.formConteiner form .submitButton {
+	font-size: 15px;
+	margin-top: 3.5vh;
+	width: 70%;
+	text-align: center;
+	height: 50px;
+	background: #222;
+	border: none;
+	border-radius: 30px;
+	cursor: pointer;
+	color: white;
+	transition: 0.2s;
+}
+.formConteiner form button:hover {
+	background: #000;
+	transform: scale(1.03, 1);
+}
+.codeContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 70%;
+}
+
+.codeContainer input {
+	width: 70%;
+	height: 50px;
+	text-align: center;
+	border-color: transparent;
+	border-radius: 30px;
+	border: none;
+	box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.05);
+	outline: none;
+	transition: 0.7s;
+}
+
+.codeContainer .codeButton {
+	width: 27%;
+	height: 50px;
+	margin-top: 2vh;
+	margin-left: 3%;
+	background: #222;
+	border: none;
+	border-radius: 30px;
+	cursor: pointer;
+	color: white;
+	transition: 0.2s;
+}
+
+.codeContainer button:hover {
+	background: #000;
+	transform: scale(1.03, 1);
+}
+
+.handleDiv {
+	flex-direction: column;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100vh;
+	background-color: rgb(214, 212, 212);
+}
+.handleBtn {
+	text-align: top;
+	font-size: 15px;
+	border: none;
+	background-color: transparent;
+	color: blue;
+}
+.handleBtn {
+	text-align: top;
+	font-size: 18px;
+	border: none;
+	background-color: transparent;
+	color: black;
+}
+.handleBtn span {
+	position: relative;
+	color: blue;
+	transition: 0.5s;
+}
+
+.handleBtn span::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	width: 0;
+	height: 2px;
+	background-color: darkblue;
+	transition: width 0.5s ease;
+}
+
+.handleBtn span:hover {
+	color: darkblue;
+}
+
+.handleBtn span:hover::after {
+	width: 100%;
+}
+.title {
+	margin: 0;
+	text-align: end;
+	font-size: 70px;
+}
+
+/*Feedback Message*/
+
+.feedbackMessage {
+	position: absolute;
+	top: 2%;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 20px;
+	font-size: 20px;
+	text-align: left;
+	border-radius: 20px;
+	transition: opacity 0.3s ease-in-out;
+	box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+.success {
+	background-color: rgba(140, 248, 140, 0.712);
+}
+.error {
+	background-color: rgba(250, 92, 92, 0.774);
+}

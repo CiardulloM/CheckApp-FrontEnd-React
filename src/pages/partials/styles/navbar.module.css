@@ -1,0 +1,146 @@
+.navbarHolder {
+	z-index: 2;
+	box-sizing: border-box;
+	height: 100vh;
+	width: 195px;
+	padding: 5px 1em;
+	background-color: rgba(0, 0, 0, 0.9);
+	position: sticky;
+	top: 0;
+	left: 0;
+	transition: 500ms ease-in-out;
+	overflow: hidden;
+	text-wrap: nowrap;
+}
+.navbarHolder ul {
+	height: 92%;
+	width: 100%;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+}
+.navbarHolder ul li {
+	border: 1px solid transparent;
+	transition: 0.5s;
+}
+.navbarHolder ul li:hover {
+	border: 1px solid rgba(255, 255, 255, 0.37);
+}
+.navbarHolder button {
+	height: 60px;
+	width: 100%;
+	/*border-radius: 0.5em;*/
+	padding: 0.85em;
+	text-decoration: none;
+	color: white;
+	background-color: transparent;
+	border: 2px solid transparent;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+}
+.navbarHolder svg {
+	margin-right: 8px;
+	width: 27px;
+	height: 27px;
+	overflow: visible;
+}
+.dropdownBtn svg:last-child {
+	margin-left: 10px;
+}
+.navbarHolder > ul > li:last-child {
+	margin-top: auto;
+	justify-content: flex-end;
+}
+.navbarHolder > ul > li:last-child:hover {
+	border: 1px solid rgba(248, 13, 13, 0.966);
+}
+.navbarHolder > ul > li:first-child {
+	margin-bottom: 15px;
+	padding-left: 3px;
+	text-decoration: dashed;
+	align-items: flex-end;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 60px;
+	width: 100%;
+	border: 1px solid rgb(146, 146, 146);
+	border-radius: 6px;
+}
+.navbarHolder > ul > li:first-child span > span {
+	text-decoration: line-through;
+	transition: 150ms ease-in-out;
+}
+.navbarHolder > ul > li:first-child span {
+	overflow: hidden;
+	width: 70px;
+	transition: 300ms ease-in-out;
+}
+.close > ul > li:first-child span {
+	overflow: hidden;
+	width: 0px;
+}
+.navbarHolder > ul > li:first-child svg {
+	fill: white;
+	margin-left: 5px;
+	transition: 150ms ease-in-out;
+}
+.navbarHolder > ul > li:first-child:hover {
+	cursor: default;
+	text-decoration: none;
+}
+.toggleBtn {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	margin-bottom: 5px;
+}
+.toggleBtn svg {
+	height: 22px;
+	margin-right: 0px;
+	align-self: flex-end;
+	fill: rgb(172, 172, 172);
+	transition: 0.4s ease-in-out;
+}
+.toggleBtn:hover svg {
+	fill: white;
+}
+
+.navbarHolder button > span {
+	width: 65px;
+	overflow: hidden;
+	transition: 350ms ease-in-out;
+}
+/*dinamic clases*/
+.close {
+	padding: 5px;
+	width: 70px;
+}
+.close button > span {
+	overflow: hidden;
+	width: 0px;
+}
+
+.close button > svg {
+	display: block;
+	margin-right: 0px;
+	padding: 0px;
+}
+.rotate svg {
+	rotate: -180deg;
+}
+#selected {
+	background-color: rgba(201, 199, 199, 0.993);
+	color: black;
+	> svg {
+		fill: black;
+	}
+}
