@@ -5,12 +5,14 @@ import LoginPage from './pages/LoginPage';
 import ProtectedRoute from './pages/ProtectedRoute';
 import MainPage from './pages/MainPage';
 
+import HomePage from './pages/home';
+
 function App() {
 	return (
 		<AuthProvider>
 			<BrowserRouter>
 				<Routes>
-					<Route path="/" element={<h1> home page </h1>} />
+					<Route path="/" element={<HomePage />} />
 					<Route path="/login" element={<LoginPage />} />
 					{/*
 					<Route element={<ProtectedRoute />}>
