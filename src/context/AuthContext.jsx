@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import { loginRequest, registerRequest, verifyToken, logoutRequest, sendEmail } from '../api/auth.js';
+import { loginRequest, registerRequest, verifyToken, logoutRequest, sendEmail, createList } from '../api/auth.js';
 import Cookies from 'js-cookie';
 
 export const useAuth = () => {
@@ -95,6 +95,8 @@ export const AuthProvider = ({ children }) => {
 	}, []);
 
 	return (
-		<AuthContext.Provider value={{ handleSign, user, isAuthenticated, sendCode }}>{children}</AuthContext.Provider>
+		<AuthContext.Provider value={{ handleSign, user, isAuthenticated, sendCode, createList }}>
+			{children}
+		</AuthContext.Provider>
 	);
 };

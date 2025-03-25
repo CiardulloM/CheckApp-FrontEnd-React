@@ -8,6 +8,7 @@ import classes from './styles/main.module.css';
 //partials
 import NavBar from './partials/Navbar';
 import Create from './partials/Create';
+import TasklistLoader from './partials/TasklistLoader';
 
 function MainPage() {
 	const [handleSelected, setHandleSelected] = useState(2);
@@ -20,7 +21,18 @@ function MainPage() {
 	return (
 		<div className={classes.handleMainDiv}>
 			<NavBar handleSelected={handleSelected} handleSelectionChange={handleSelectionChange} />
-			<div className={classes.mainContent}>{handleSelected == 1 ? <Create /> : ''}</div>
+			<div className={classes.mainContent}>
+				{handleSelected == 1 ? (
+					<Create handleSelectionChange={handleSelectionChange} handleSelected={handleSelected} />
+				) : (
+					''
+				)}
+				{handleSelected == 2 ? (
+					<TasklistLoader handleSelectionChange={handleSelectionChange} handleSelected={handleSelected} />
+				) : (
+					''
+				)}
+			</div>
 		</div>
 	);
 }
