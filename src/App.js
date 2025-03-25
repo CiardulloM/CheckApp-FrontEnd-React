@@ -14,12 +14,12 @@ function App() {
 				<Routes>
 					<Route path="/" element={<HomePage />} />
 					<Route path="/login" element={<LoginPage />} />
-					{/*
 					<Route element={<ProtectedRoute />}>
 						<Route path="/main" element={<MainPage />} />
 					</Route>
-					*/}
+					{/*
 					<Route path="/main" element={<MainPage />} />
+					*/}
 				</Routes>
 			</BrowserRouter>
 		</AuthProvider>

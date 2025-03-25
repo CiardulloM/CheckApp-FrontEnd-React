@@ -6,3 +6,6 @@ export const registerRequest = (user, verifyCodeId) => instance.post(`/register`
 export const logoutRequest = () => instance.get(`/logout`);
 export const verifyToken = () => instance.get(`/auth/verify`);
 export const sendEmail = (user) => instance.post('/getverificationcode', user);
+//tasklist
+export const createList = (list, user) => instance.post('/createtasklist', { ...list, user });
+export const getlists = (userId) => instance.get('/gettasklists', userId);
